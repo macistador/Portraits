@@ -1,0 +1,94 @@
+PODS:
+  - Action (3.9.1):
+    - RxCocoa (~> 4.3)
+    - RxSwift (~> 4.3)
+  - Crashlytics (3.11.1):
+    - Fabric (~> 1.8.1)
+  - Differentiator (3.1.0)
+  - Fabric (1.8.2)
+  - Reusable (4.0.4):
+    - Reusable/Storyboard (= 4.0.4)
+    - Reusable/View (= 4.0.4)
+  - Reusable/Storyboard (4.0.4)
+  - Reusable/View (4.0.4)
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxKeyboard (0.9.0):
+    - RxCocoa (>= 4.3.1)
+    - RxSwift (>= 4.3.1)
+  - RxOptional (3.6.2):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - SwiftRater (1.3.0)
+  - Swinject (2.5.0)
+  - SwinjectStoryboard (2.1.0):
+    - Swinject (~> 2.5)
+  - Then (2.4.0)
+
+DEPENDENCIES:
+  - Action (from `https://github.com/RxSwiftCommunity/Action`)
+  - Crashlytics
+  - Fabric
+  - Reusable
+  - RxDataSources
+  - RxKeyboard
+  - RxOptional
+  - RxSwift
+  - SwiftRater
+  - Swinject
+  - SwinjectStoryboard
+  - Then
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Differentiator
+    - Fabric
+    - Reusable
+    - RxAtomic
+    - RxCocoa
+    - RxDataSources
+    - RxKeyboard
+    - RxOptional
+    - RxSwift
+    - SwiftRater
+    - Swinject
+    - SwinjectStoryboard
+    - Then
+
+EXTERNAL SOURCES:
+  Action:
+    :git: https://github.com/RxSwiftCommunity/Action
+
+CHECKOUT OPTIONS:
+  Action:
+    :commit: 7b9513cf683ed24b07618ec9125b3a24e481d9e8
+    :git: https://github.com/RxSwiftCommunity/Action
+
+SPEC CHECKSUMS:
+  Action: 2f461c203c480b17aa99b3bb166e4329ecff6908
+  Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
+  Reusable: 7fc772097df3e5fc86f59d8a7af9708e49b5ff55
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxKeyboard: 4f782303f499f41577b41c96c6a9a5d7acd51a47
+  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SwiftRater: 035512c0c454c83bd4d96b483d8854606aeecccf
+  Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
+  SwinjectStoryboard: 688f096033103e66ffcf6ca678211acd7d7be505
+  Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
+
+PODFILE CHECKSUM: c460306c2373ff0c0b708c263aa34190e2db53fb
+
+COCOAPODS: 1.5.3

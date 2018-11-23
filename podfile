@@ -1,0 +1,168 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+# ------------------------------------------------------------------------
+# Configuration du Podfile
+# ------------------------------------------------------------------------
+platform :ios, '11.0'
+inhibit_all_warnings!
+use_frameworks!
+
+# ------------------------------------------------------------------------
+# core_pods: Used by all targets (App, Widget, Watch)
+# ------------------------------------------------------------------------
+
+def core_pods
+
+end
+
+
+# ------------------------------------------------------------------------
+# core_iosapp_pods: Used only by the iOS app
+# ------------------------------------------------------------------------
+
+def core_iosapp_pods
+
+  # Archi
+    # pod 'ReSwift'
+    # pod 'ReSwiftRouter'
+
+  # Network
+    # pod 'Moya'
+    # pod 'HanekeSwift'
+
+  # DepencyInjection
+   pod 'Swinject'
+   pod 'SwinjectStoryboard'
+   # pod 'SwinjectAutoregistration'
+
+  # Feature Flipping
+    # pod 'SwiftTweaks'
+
+  # Framework
+    # pod 'Result', '~> 3.2.3'
+    pod 'Then'
+    # pod 'PluggableApplicationDelegate'
+    pod 'Reusable'
+
+  # UI
+    # pod 'TKSubmitTransition', :git => 'https://github.com/entotsu/TKSubmitTransition.git', :tag => '2.0'
+    # pod 'Kingfisher', '~> 4.0'
+    # pod 'Hero' #, :git => 'https://github.com/lkzhao/Hero.git'
+
+  # Analytics
+    # pod 'SwiftLint'
+
+  # Debug
+    # pod "DBDebugToolkit"
+
+  # Permissions
+    # pod 'PermissionScope'
+
+  # Divers
+    # pod 'DateToolsSwift'
+    pod "SwiftRater"
+
+end
+
+
+# ------------------------------------------------------------------------
+# rx_stuff: shared RX frameworks
+# ------------------------------------------------------------------------
+
+def rx_stuff
+  # ReactiveProgramming
+  pod 'RxSwift'
+  pod 'RxDataSources'
+  pod 'RxOptional'
+  pod 'RxKeyboard'
+  # pod 'NeoCoordinator'
+  # pod 'RxCoordinator'
+  pod 'Action', :git => 'https://github.com/RxSwiftCommunity/Action'
+  # pod "RxStoreKit", :git => 'https://github.com/macistador/RxStoreKit'
+end
+
+
+# ------------------------------------------------------------------------
+# core_test_pods: Utilisé par tout les types de test
+# ------------------------------------------------------------------------
+
+def core_test_pods
+  # Vieux tests
+  #  pod 'OCMock'          , '~> 3.4'
+  #  pod 'Expecta'         , '~> 1.0.5'
+
+   # Nouveaux Test
+  #  pod 'Quick', '~> 1.1.0'
+  #  pod 'Nimble', '~> 7.0.0'
+  #  pod 'SwiftCheck', '~> 0.8.0'
+
+  # Nouveaux Test
+  # pod 'RxBlocking'
+  # pod 'RxTest'
+end
+
+
+# ------------------------------------------------------------------------
+# realm_pod: Utilisé par les targets qui accèdent à la base de données
+# ------------------------------------------------------------------------
+
+def realm_pod
+  pod 'RealmSwift'
+  pod "RxRealm"
+end
+
+
+# ------------------------------------------------------------------------
+# analytics_pod: Utilisé par les targets qui accèdent à utiles analytics
+# ------------------------------------------------------------------------
+
+def analytics_pod
+  pod 'Fabric'
+  pod 'Crashlytics'
+#  pod 'Appsee'
+  # pod 'FacebookCore'
+  # pod 'FBAudienceNetwork'
+end
+
+
+# ------------------------------------------------------------------------
+# Targets - Apps
+# ------------------------------------------------------------------------
+
+target 'Portraits' do
+  core_iosapp_pods
+  core_pods
+  # realm_pod
+  analytics_pod
+  rx_stuff
+end
+
+# ------------------------------------------------------------------------
+# Targets - Tests
+# ------------------------------------------------------------------------
+
+target 'PortraitsTests' do
+    core_iosapp_pods
+    analytics_pod
+    core_pods
+    core_test_pods
+    # realm_pod
+end
+
+
+# ------------------------------------------------------------------------
+# Configuration custom
+# ------------------------------------------------------------------------
+
+# # Enable DEBUG flag in Swift for SwiftTweaks
+# post_install do |installer|
+#     installer.pods_project.targets.each do |target|
+#         if target.name == 'SwiftTweaks'
+#             target.build_configurations.each do |config|
+#                 if config.name == 'Debug'
+#                     config.build_settings['OTHER_SWIFT_FLAGS'] = '-DDEBUG'
+#                 end
+#             end
+#         end
+#     end
+# end
